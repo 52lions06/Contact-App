@@ -15,6 +15,10 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(ContactsTableViewController.toggleEdit))
+        
+        navigationItem.leftBarButtonItem = moveButton
+        
         let jenny = Contact(name: "Jenny", phoneNumber: "1-800-555-5566")
         let rich = Contact(name: "Rich")
         let mindy = Contact(phoneNumber: "888-888-8888")
@@ -28,6 +32,10 @@ class ContactsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func toggleEdit () {
+        tableView.setEditing(!tableView.isEditing, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,12 +98,13 @@ class ContactsTableViewController: UITableViewController {
     }
 
 
-    /*
+
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let contactMoving = contacts.remove(at: fromIndexPath.row)
+        contacts.insert(contactMoving, at: to.row)
     }
-    */
+
 
     /*
     // Override to support conditional rearranging of the table view.

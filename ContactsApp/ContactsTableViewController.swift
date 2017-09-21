@@ -19,6 +19,10 @@ class ContactsTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = moveButton
         
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ContactsTableViewController.addContact))
+        
+        navigationItem.rightBarButtonItem = addButton
+        
         let jenny = Contact(name: "Jenny", phoneNumber: "1-800-555-5566")
         let rich = Contact(name: "Rich")
         let mindy = Contact(phoneNumber: "888-888-8888")
@@ -36,6 +40,13 @@ class ContactsTableViewController: UITableViewController {
     
     func toggleEdit () {
         tableView.setEditing(!tableView.isEditing, animated: true)
+    }
+    
+    func addContact () {
+        let newContact = Contact(name: "New Contact", phoneNumber: "000-000-0000")
+        self.contacts.append(newContact)
+        let newIndexPath = IndexPath(row: self.contacts.count - 1, section: 0)
+        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
 
     override func didReceiveMemoryWarning() {

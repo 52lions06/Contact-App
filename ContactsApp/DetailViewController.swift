@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var phoneNumberLabel: UILabel!
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var phoneNumberField: UITextField!
     var contact: Contact?
 
     override func viewDidLoad() {
@@ -19,14 +19,25 @@ class DetailViewController: UIViewController {
                 
         if let contact = self.contact {
             if let name = contact.name {
-                self.nameLabel.text = name
+                self.nameField.text = name
             }
             if let phoneNumber = contact.phoneNumber {
-                self.phoneNumberLabel.text = phoneNumber
+                self.phoneNumberField.text = phoneNumber
             }
         }
-        // Do any additional setup after loading the view.
+        
+               // Do any additional setup after loading the view.
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (textField == self.nameField) {
+            self.contact?.name = textField.text
+        } else if (textField == self.phoneNumberField ){
+            self.contact?.name = textField.text
+        }
+    }
+
+//    func textFieldDidEndEditing(_ textField:)
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

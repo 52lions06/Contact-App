@@ -16,7 +16,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        self.nameField.delegate = self
+        self.phoneNumberField.delegate = self
+        
         if let contact = self.contact {
             if let name = contact.name {
                 self.nameField.text = name

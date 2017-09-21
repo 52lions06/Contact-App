@@ -19,7 +19,7 @@ class Contact: NSObject {
 
 }
 
-var contact1 = Contact(name: "Peter", phoneNumber: "888-889-3434")
-var contact2 = Contact(phoneNumber: "800-800-8000")
-var contact3 = Contact(name: "John")
-var contact4 = Contact()
+//var contact1 = Contact(name: "Peter", phoneNumber: "888-889-3434")
+//var contact2 = Contact(phoneNumber: "800-800-8000")
+//var contact3 = Contact(name: "John")
+//var contact4 = Contact()

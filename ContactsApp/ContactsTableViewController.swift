@@ -14,6 +14,14 @@ class ContactsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let jenny = Contact(name: "Jenny", phoneNumber: "1-800-555-5566")
+        let rich = Contact(name: "Rich")
+        let mindy = Contact(phoneNumber: "888-888-8888")
+        
+        self.contacts.append(jenny)
+        self.contacts.append(rich)
+        self.contacts.append(mindy)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,7 +42,7 @@ class ContactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.contacts.count
     }
 
     
@@ -43,11 +51,26 @@ class ContactsTableViewController: UITableViewController {
 
          //Configure the cell...
         
-        cell.textLabel?.text = "A fine example of a UITableViewCell."
+        let contact = self.contacts[indexPath.row]
+        
+        if let name = contact.name {
+            cell.textLabel?.text = name
+        }
+        else {
+            cell.textLabel?.text = "No Name"
+
+        }
+        
         return cell
     }
  
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
+        let contact = self.contacts[(indexPath?.row)!]
+        let destination = segue.destination as! DetailViewController
+        destination.contact = contact
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

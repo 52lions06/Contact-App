@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="2jX-Tq-jSY" customClass="ContactsTableViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5E-sb-s8U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -59,7 +59,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fEX-wb-g2m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Im-QR-ATe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ml-AK-YUu">
@@ -86,16 +86,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRh-rz-FXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031.2" y="230.73463268365819"/>
+            <point key="canvasLocation" x="1691" y="220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lEM-8k-P50">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxC-5x-i6q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ekj-4H-ST1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ekj-4H-ST1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.13345273260000001" blue="0.0097708383499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -104,7 +105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HyZ-XU-ESz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184.80000000000001" y="219.94002998500753"/>
+            <point key="canvasLocation" x="512" y="220"/>
         </scene>
     </scenes>
 </document>

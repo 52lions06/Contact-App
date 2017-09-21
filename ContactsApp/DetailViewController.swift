@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         if let contact = self.contact {
             if let name = contact.name {
                 self.nameLabel.text = name

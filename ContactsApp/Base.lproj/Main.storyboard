@@ -6,9 +6,40 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="6Li-el-afb">
+            <objects>
+                <viewController id="KYH-6K-jwX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dK2-Vs-eWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q82-BZ-MQh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EM3-cB-Eeh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-C9-z0I" customClass="OnboardingView" customModule="ContactsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZ2-C9-z0I" secondAttribute="trailing" constant="-16" id="589-LC-2Kd"/>
+                            <constraint firstItem="MZ2-C9-z0I" firstAttribute="top" secondItem="dK2-Vs-eWS" secondAttribute="bottom" constant="-20" id="Emn-yV-q6N"/>
+                            <constraint firstItem="MZ2-C9-z0I" firstAttribute="leading" secondItem="EM3-cB-Eeh" secondAttribute="leadingMargin" constant="-16" id="GFH-6u-eVl"/>
+                            <constraint firstItem="Q82-BZ-MQh" firstAttribute="top" secondItem="MZ2-C9-z0I" secondAttribute="bottom" id="Jse-zp-tJx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wu-yb-2Mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109.5999999999999" y="-475.41229385307349"/>
+        </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="maV-6H-bka">
             <objects>
@@ -22,11 +53,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufU-vx-oIV" id="QJq-z1-s4K">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WdD-mp-niF">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
